@@ -27,11 +27,11 @@ class ClienteController extends BaseController
     public function guardar() {
         $modelo = new ClienteModel();
         $datos = [
-            'nombres' => $this->request->getPost('nombres'),
-            'apellidos' => $this->request->getPost('apellidos'),
-            'cedula' => $this->request->getPost('cedula'),
-            'telefono' => $this->request->getPost('telefono'),
-            'email' => $this->request->getPost('email'),
+            'nombres' => $this->request->getVar('nombres'),
+            'apellidos' => $this->request->getVar('apellidos'),
+            'cedula' => $this->request->getVar('cedula'),
+            'telefono' => $this->request->getVar('telefono'),
+            'email' => $this->request->getVar('email'),
         ];
         $modelo -> insert($datos);
         return redirect()->to('/clientes');
