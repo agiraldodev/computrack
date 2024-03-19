@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <?= $this->include('ui/cabecera') ?>
 
 <div class="container">
     <!-- Contenido de las páginas -->
