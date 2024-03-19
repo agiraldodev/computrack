@@ -21,3 +21,5 @@ $routes->post('clientes/guardar', 'ClienteController::guardar');
 // Editar
 $routes->get('clientes/editar/(:num)', 'ClienteController::editar/$1');
 $routes->post('clientes/actualizar/(:num)', 'ClienteController::actualizar/$1');
+
+$routes->get('/clientes/buscar', 'ClienteController::buscar');

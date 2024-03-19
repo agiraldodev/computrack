@@ -11,7 +11,7 @@
 <body>
     <?= $this->include('ui/cabecera') ?>
 
-<div class="container">
+<div class="container mt-4">
     <!-- Contenido de las páginas -->
     <?= $this->renderSection('contenido') ?>
 </div>

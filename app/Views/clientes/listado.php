@@ -3,8 +3,20 @@
 
 <?= $this->section('contenido') ?>
 
+<div class="d-flex gap-2">
+	<a class="btn btn-primary" href="<?= base_url('clientes/nuevo') ?>">Crear nuevo cliente</a>
+
+	<form action="<?= base_url('clientes/buscar') ?>" method="get" ">
+		<div class="input-group">
+			<input type="text" name="q" class="form-control" autocomplete="off" required>
+			<button type="submit" class="btn btn-outline-primary">Buscar</button>
+		</div>
+	</form>
+</div>
+
 <h1>Listado Clientes</h1>
-<a class="btn btn-primary" href="<?= base_url('clientes/nuevo') ?>">Crear nuevo cliente</a>
+
+
 <table class="table table-hover table-sm">
 	<thead>
 		<th>Nombres</th>

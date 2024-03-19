@@ -58,4 +58,22 @@ class ClienteController extends BaseController
         $modelo->update($id, $datos);
         return redirect()->to('/clientes');
     }
+
+    public function buscar() {
+        $modelo = new ClienteModel();
+
+        // Obtener el término de búsqueda de la URL
+        $peticion = $this->request->getVar('q');
+
+        // Realizar la búsqueda en el modelo de Cliente
+        $clientes = $modelo->like('nombres', $peticion)
+                            ->orLike('apellidos', $peticion)
+                            ->orLike('cedula', $peticion)
+                            ->orLike('telefono', $peticion)
+                            ->orLike('email', $peticion)
+                            ->findAll();
+
+        // Pasar los resultados de la búsqueda a la vista
+        return view('clientes/listado', ['clientes' => $clientes]);
+    }
 }
