@@ -1,34 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cliente</title>
-    <style>
-        form input{
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <form action="<?= base_url('clientes/guardar')?>" method="post">
-        <h1>Nuevo Cliente</h1>
-        <label for="nombres">Nombres:</label>
-        <input type="text" name="nombres" autocomplete="off">
+<?= $this->extend('plantilla') ?>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" name="apellidos" autocomplete="off">
+<?= $this->section('contenido') ?>
 
-        <label for="cedula">Cédula:</label>
-        <input type="number" name="cedula" autocomplete="off">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 mx-auto">
+            <h1 class="mb-2 display-6">Nuevo Cliente</h1>
+            <form action="<?= base_url('clientes/guardar') ?>" method="post">
 
-        <label for="telefono">Teléfono:</label>
-        <input type="number" name="telefono" autocomplete="off">
+                <div class="mb-3">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" name="nombres" autocomplete="off" class="form-control">
+                </div>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" autocomplete="off">
+                <div class="mb-3">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" autocomplete="off" class="form-control">
+                </div>
 
-        <button type="submit">Crear</button>
-    </form>
-</body>
-</html>
+                <div class="mb-3">
+                    <label for="cedula">Cédula:</label>
+                    <input type="number" name="cedula" autocomplete="off" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" name="telefono" autocomplete="off" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" autocomplete="off" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<?= $this->endSection() ?>
