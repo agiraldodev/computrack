@@ -15,7 +15,7 @@ class ClienteController extends BaseController
     public function delete($id = null)
     {
         $modelo = new ClienteModel();
-        $modelo -> delte($id);
+        $modelo -> delete($id);
 
         return redirect()->to('/clientes');
     }
