@@ -10,27 +10,27 @@
 
                 <div class="mb-3">
                     <label for="nombres">Nombres:</label>
-                    <input type="text" name="nombres" autocomplete="off" class="form-control" value=""<?= $cliente['nombres']?>>
+                    <input type="text" name="nombres" autocomplete="off" class="form-control" value="<?= $cliente['nombres']?>">
                 </div>
 
                 <div class="mb-3">
                     <label for="apellidos">Apellidos:</label>
-                    <input type="text" name="apellidos" autocomplete="off" class="form-control" value=""<?= $cliente['apellidos']?>>
+                    <input type="text" name="apellidos" autocomplete="off" class="form-control" value="<?= $cliente['apellidos']?>">
                 </div>
 
                 <div class="mb-3">
                     <label for="cedula">Cédula:</label>
-                    <input type="number" name="cedula" autocomplete="off" class="form-control" value=""<?= $cliente['cedula']?>>
+                    <input type="number" name="cedula" autocomplete="off" class="form-control" value="<?= $cliente['cedula']?>">
                 </div>
 
                 <div class="mb-3">
                     <label for="telefono">Teléfono:</label>
-                    <input type="number" name="telefono" autocomplete="off" class="form-control" value=""<?= $cliente['telefono']?>>
+                    <input type="number" name="telefono" autocomplete="off" class="form-control" value="<?= $cliente['telefono']?>">
                 </div>
 
                 <div class="mb-3">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" autocomplete="off" class="form-control" value=""<?= $cliente['email']?>>
+                    <input type="email" name="email" autocomplete="off" class="form-control" value="<?= $cliente['email']?>">
                 </div>
 
                 <button type="submit" class="btn btn-warning w-100">Actualizar</button>
