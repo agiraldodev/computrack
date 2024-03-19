@@ -36,4 +36,26 @@ class ClienteController extends BaseController
         $modelo -> insert($datos);
         return redirect()->to('/clientes');
     }
+
+    public function editar($id) {
+        $modelo = new ClienteModel();
+        $datos['cliente'] = $modelo->find($id);
+
+        return view('clientes/editar', $datos);
+    }
+
+    public function actualizar($id) {
+        $modelo = new ClienteModel();
+
+        $datos = [
+            'nombres' => $this->request->getVar('nombres'),
+            'apellidos' => $this->request->getVar('apellidos'),
+            'cedula' => $this->request->getVar('cedula'),
+            'telefono' => $this->request->getVar('telefono'),
+            'email' => $this->request->getVar('email'),
+        ];
+
+        $modelo->update($id, $datos);
+        return redirect()->to('/clientes');
+    }
 }

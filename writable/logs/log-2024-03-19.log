@@ -5,3 +5,23 @@ in SYSTEMPATH\Model.php on line 874.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteController))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 14:10:13 --> ErrorException: Undefined array key "correo"
+in APPPATH\Views\clientes\editar.php on line 16.
+ 1 APPPATH\Views\clientes\editar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'C:\\xampp\\htdocs\\computrack\\app\\Views\\clientes\\editar.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\computrack\\app\\Views\\clientes\\editar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 5 APPPATH\Controllers\ClienteController.php(44): view('clientes/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ClienteController->editar('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 14:13:19 --> ErrorException: preg_match(): Compilation failed: missing closing parenthesis at offset 29
+in SYSTEMPATH\Router\Router.php on line 425.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): Compilation failed: missing closing parenthesis at offset 29', 'C:\\xampp\\htdocs\\computrack\\system\\Router\\Router.php', 425)
+ 2 SYSTEMPATH\Router\Router.php(425): preg_match('#^clientes/actualizar/([0-9]+$#u', 'clientes/actualizar/4', [])
+ 3 SYSTEMPATH\Router\Router.php(187): CodeIgniter\Router\Router->checkRoutes('clientes/actualizar/4')
+ 4 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('clientes/actualizar/4')
+ 5 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
