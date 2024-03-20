@@ -22,3 +22,10 @@ in SYSTEMPATH\Router\RouteCollection.php on line 1018.
  4 SYSTEMPATH\Router\RouteCollection.php(345): require('C:\\xampp\\htdocs\\computrack\\app\\Config\\Routes.php')
  5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
  6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-03-20 14:59:06 --> ErrorException: Undefined array key "nombres giraldo"
+in APPPATH\Controllers\DispositivoController.php on line 36.
+ 1 APPPATH\Controllers\DispositivoController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres giraldo"', 'C:\\xampp\\htdocs\\computrack\\app\\Controllers\\DispositivoController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DispositivoController->obtenerNombreClientePorCedula()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DispositivoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
