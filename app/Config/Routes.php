@@ -18,6 +18,7 @@ $routes->group('clientes', static function ($routes) {
 });
 
 $routes->group('dispositivos', static function ($routes) {
+    $routes->get('/', 'DispositivoController::listado');
     $routes->get('nuevo', 'DispositivoController::crear');
     $routes->get('obtenerClientes', 'DispositivoController::obtenerClientes');
     $routes->get('obtenerNombreClientePorCedula', 'DispositivoController::obtenerNombreClientePorCedula');

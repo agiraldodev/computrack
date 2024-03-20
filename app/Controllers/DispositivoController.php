@@ -10,9 +10,17 @@ use App\Models\DispositivoModel;
 
 class DispositivoController extends BaseController
 {
-    public function index()
+    public function listado()
     {
-        //
+        $dispositivoModel = new DispositivoModel();
+
+        // Obtener los dispositivos con clientes paginados
+        $dispositivos = $dispositivoModel->obtenerDispositivosConCliente();
+
+        // Pasar los datos y la paginación a la vista
+        $data['dispositivos'] = $dispositivos;
+        $data['pager'] = $dispositivoModel->pager;
+        return view ('dispositivos/listado', $data);
     }
 
     public function crear() {
