@@ -42,7 +42,7 @@ class DispositivoController extends BaseController
         }
 
         // Devolver el nombre del cliente y su ID como una respuesta JSON
-        return $this->response->setJSON(['nombreCompleto' => $nombreCompleto, 'clienteId']);
+        return $this->response->setJSON(['nombreCompleto' => $nombreCompleto, 'clienteId' => $clienteId]);
     }
 
     public function registrarDispositivo()
