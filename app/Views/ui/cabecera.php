@@ -15,7 +15,7 @@
           <a class="nav-link" href="<?= base_url('/clientes')?>">Clientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dispositivos</a>
+          <a class="nav-link" href="<?= base_url('/dispositivos/nuevo')?>">Dispositivos</a>
         </li>
       </ul>
     </div>
