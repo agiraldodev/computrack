@@ -14,9 +14,6 @@
 	</form>
 </div>
 
-<h1>Listado Clientes</h1>
-
-
 <table class="table table-hover table-sm">
 	<thead>
 		<th>Nombres</th>
