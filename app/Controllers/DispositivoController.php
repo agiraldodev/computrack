@@ -78,6 +78,6 @@ class DispositivoController extends BaseController
         $dispositivoModel->insert($data);
 
         // Redirigir a la página
-        return redirect()->to('dispositivos/nuevo');
+        return redirect()->to('dispositivos');
     }
 }
