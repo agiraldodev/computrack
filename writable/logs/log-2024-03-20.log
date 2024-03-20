@@ -29,3 +29,10 @@ in APPPATH\Controllers\DispositivoController.php on line 36.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DispositivoController))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 15:35:09 --> ErrorException: Undefined array key "nombres giraldo"
+in APPPATH\Controllers\DispositivoController.php on line 36.
+ 1 APPPATH\Controllers\DispositivoController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres giraldo"', 'C:\\xampp\\htdocs\\computrack\\app\\Controllers\\DispositivoController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DispositivoController->obtenerNombreClientePorCedula()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DispositivoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

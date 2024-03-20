@@ -79,7 +79,8 @@
                 },
                 success: function (response) {
                     $('#nombreCliente').val(response.nombreCompleto);
-                    $('#clienteId').val(response.clienteId); // Actualizar el valor del clienteId
+                    $('#clienteId').val(response
+                        .clienteId); // Actualizar el valor del clienteId
                 },
                 error: function() {
                     $('#nombreCliente').val('');
