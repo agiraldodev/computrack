@@ -17,3 +17,6 @@ $routes->group('clientes', static function ($routes) {
     $routes->get('buscar', 'ClienteController::buscar');
 });
 
+$routes->group('dispositivos', static function ($routes) {
+    $routes->get('nuevo', 'DispositivoController::crear');
+});
