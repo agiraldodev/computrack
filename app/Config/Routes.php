@@ -23,6 +23,8 @@ $routes->group('dispositivos', static function ($routes) {
     $routes->get('obtenerClientes', 'DispositivoController::obtenerClientes');
     $routes->get('obtenerNombreClientePorCedula', 'DispositivoController::obtenerNombreClientePorCedula');
     $routes->post('guardar', 'DispositivoController::registrarDispositivo');
+
+    $routes->get('borrar/(:num)', 'DispositivoController::borrar/$1'); // Borrar dispositivo por id
 });
 
 $routes->group('ordenes', static function ($routes) {

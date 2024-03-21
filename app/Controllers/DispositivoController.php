@@ -80,4 +80,12 @@ class DispositivoController extends BaseController
         // Redirigir a la página
         return redirect()->to('dispositivos');
     }
+
+    public function borrar($id = null)
+    {
+        $dispositivoModel = new DispositivoModel();
+        $dispositivoModel ->delete($id);
+
+        return redirect()->to('/dispositivos');
+    }
 }

@@ -13,7 +13,11 @@ class OrdenController extends BaseController
 {
     public function listado()
     {
-        return view('ordenes/listado');
+        $ordenModel = new OrdenModel();
+        $ordenes = $ordenModel->findAll();
+
+        $data['ordenes'] = $ordenes;
+        return view('ordenes/listado', $data);
     }
 
     public function crear() {
