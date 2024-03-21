@@ -4,7 +4,7 @@
 
 <h1>Dahsboard de las ordenes </h1>
 
-<a class="btn btn-success" href="">Generar nueva orden</a>
+<a class="btn btn-success" href="<?= site_url('ordenes/nueva')?>">Generar nueva orden</a>
 
 <div class="container">
     <div class="row">

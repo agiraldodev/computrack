@@ -85,21 +85,21 @@
                 success: function (response) {
                     if (response.success) {
                         // Mostrar el nombre del cliente
-                        $('nombreCliente').text(response.cliente.nombres + ' ' + response.cliente.apellidos);
+                        $('h3#nombreCliente').text(response.cliente.nombres + ' ' + response.cliente.apellidos);
 
                         // Limpiar la tabla de dispositivos
                         $('table#tablaDispositivos tbody').empty();
 
                         // Mostrar los dispositivos asociados al cliente en la tabla
                         $.each(response.dispositivos, function (index, dispositivo) {
-                            $('table#tablaDispositivos tbody').append('<tr data-id="' + dispositivo.id '"><td>' + dispositivo.tipoDispositivo + '</td><td>' + dispositivo.marca + '</td><td>' + dispositivo.modelo + '</td><td>' + dispositivo.color + '</td><td>' + dispositivo.serial + '</td>td><button class="btn btn-success">Seleccionar</button></td></tr>')
-                        })
-                    }else {
+                            $('table#tablaDispositivos tbody').append('<tr data-id="' + dispositivo.id + '"><td>' + dispositivo.tipoDispositivo + '</td><td>' + dispositivo.marca + '</td><td>' + dispositivo.modelo + '</td><td>' + dispositivo.color + '</td><td>' + dispositivo.serial + '</td><td><button class="btn btn-success">Seleccionar</button></td></tr>');
+                        });
+                    } else {
                         // Si ocurrió un error, mostrar un mensaje de error
                         alert(response.message);
                     }
                 },
-                error: function() {
+                error: function () {
                     // Si ocurrió un error en la solicitud AJAX, mostrar un mensaje de error
                     alert('Error al buscar dispositivo');
                 }
