@@ -1,4 +1,3 @@
-<!-- ordenes/listado.php -->
 <?= $this->extend('plantilla') ?>
 
 <?= $this->section('contenido') ?>
@@ -16,31 +15,33 @@
 				</h4>
 
 				<?php foreach ($ordenes as $orden): ?>
-					<div class="card">
-						<h5 class="card-header">
-							<?= $orden['dispositivo_id'] ?>
-						</h5>
-						<div class="card-body">
-							<p class="card-text">
-								<?= $orden['observaciones'] ?>
-							</p>
-							<span class="badge rounded-pill 
-												<?php if ($orden['estado'] == 'pendiente'): ?>text-bg-warning
-												<?php elseif ($orden['estado'] == 'enCurso'): ?>text-bg-primary
-												<?php elseif ($orden['estado'] == 'finalizado'): ?>text-bg-success
-												<?php endif; ?>">
-								<?= $orden['fechaIngreso'] ?>
-							</span>
-							<?php if ($orden['estado'] != 'finalizado'): ?>
-								<select name="estado" class="form-select estado-select"
-									onchange="actualizarEstado(<?= $orden['id'] ?>, this.value)">
-									<option value="pendiente" <?= ($orden['estado'] == 'pendiente') ? 'selected' : '' ?>>Pendiente</option>
-									<option value="enCurso" <?= ($orden['estado'] == 'enCurso') ? 'selected' : '' ?>>En Curso</option>
-									<option value="finalizado" <?= ($orden['estado'] == 'finalizado') ? 'selected' : '' ?>>Finalizado</option>
-								</select>
-							<?php endif; ?>
+					<?php if ($orden['estado'] == $estado): ?>
+						<div class="card">
+							<h5 class="card-header">
+								<?= $orden['dispositivo_id'] ?>
+							</h5>
+							<div class="card-body">
+								<p class="card-text">
+									<?= $orden['observaciones'] ?>
+								</p>
+								<span class="badge rounded-pill 
+																								<?php if ($orden['estado'] == 'pendiente'): ?>text-bg-warning
+																								<?php elseif ($orden['estado'] == 'enCurso'): ?>text-bg-primary
+																								<?php elseif ($orden['estado'] == 'finalizado'): ?>text-bg-success
+																								<?php endif; ?>">
+									<?= $orden['fechaIngreso'] ?>
+								</span>
+								<?php if ($orden['estado'] != 'finalizado'): ?>
+									<select name="estado" class="form-select estado-select" data-orden-id="<?= $orden['id'] ?>"
+										onchange="actualizarEstado(<?= $orden['id'] ?>, this.value)">
+										<option value="pendiente" <?= ($orden['estado'] == 'pendiente') ? 'selected' : '' ?>>Pendiente</option>
+										<option value="enCurso" <?= ($orden['estado'] == 'enCurso') ? 'selected' : '' ?>>En Curso</option>
+										<option value="finalizado" <?= ($orden['estado'] == 'finalizado') ? 'selected' : '' ?>>Finalizado</option>
+									</select>
+								<?php endif; ?>
+							</div>
 						</div>
-					</div>
+					<?php endif; ?>
 				<?php endforeach; ?>
 			</div>
 		<?php endforeach; ?>
