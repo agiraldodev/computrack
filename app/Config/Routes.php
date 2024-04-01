@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->addRedirect('/', 'clientes');
 
 $routes->group('clientes', static function ($routes) {
     $routes->get('/', 'ClienteController::listado'); // Obtener todos los clientes
@@ -32,4 +32,5 @@ $routes->group('ordenes', static function ($routes) {
     $routes->get('nueva', 'OrdenController::crear');
     $routes->post('buscarDispositivos', 'OrdenController::buscarDispositivos');
     $routes->post('guardarOrden', 'OrdenController::guardarOrden');
+    $routes->post('actualizar_estado', 'OrdenController::actualizarEstado');
 });
