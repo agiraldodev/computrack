@@ -34,3 +34,8 @@ $routes->group('ordenes', static function ($routes) {
     $routes->post('guardarOrden', 'OrdenController::guardarOrden');
     $routes->post('actualizar_estado', 'OrdenController::actualizarEstado');
 });
+
+$routes->group('facturas', static function ($routes) {
+    $routes->addRedirect('/', 'facturas/crear');
+    $routes->get('crear', 'FacturaController::crear');
+});
