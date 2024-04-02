@@ -7,6 +7,8 @@
 <table class="table table-hover table-sm">
 	<thead>
         <th>Fecha ingreso</th>
+        <th>Dispositivo</th>
+        <th>Acciones</th>
 	</thead>
 	<tbody>
 		<?php
@@ -15,6 +17,12 @@
 			<tr>
 				<td>
 					<?= $ordenFinalizada['fechaIngreso'] ?>
+				</td>
+				<td>
+					<?= $ordenFinalizada['observaciones'] ?>
+				</td>
+				<td>
+					<button class="btn btn-success">Cobrar</button>
 				</td>
 			</tr>
 		<?php endforeach; ?>
