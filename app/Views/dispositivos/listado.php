@@ -47,6 +47,4 @@
 	</tbody>
 </table>
 
-
-
 <?= $this->endSection() ?>
