@@ -56,7 +56,6 @@
                     placeholder="Valor a cobrar por el servicio" required />
                 <input type="hidden" name="ordenId" value="<?= $orden['id'] ?>">
                 <button type="submit" class="btn btn-primary">Cobrar y generar factura</button>
-
             </form>
         </div>
     </div>
