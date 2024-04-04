@@ -24,8 +24,13 @@ class OrdenController extends BaseController
             $dispositivoId = $orden['dispositivo_id'];
             $cliente = $clienteModel->join('dispositivos', 'clientes.id = dispositivos.cliente_id')->where('dispositivos.id', $dispositivoId)->first();
 
-            // Asignar el nombre del cliente a la orden
-            $orden['nombre_cliente'] = $cliente['nombres'] . ' ' . $cliente['apellidos'];
+            if($cliente) {
+                // Asignar el nombre del cliente a la orden
+                $orden['nombre_cliente'] = $cliente['nombres'] . ' ' . $cliente['apellidos'];
+            }
+            else {
+                $orden['nombre_cliente'] = 'El cliente no existe';
+            }
 
         }
 
